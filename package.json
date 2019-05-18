@@ -1,8 +1,8 @@
 {
-  "name": "react-shopping-cart",
+  "name": "React-Shopping-Cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://v8661087.github.io/react-shopping-cart/",
+  "homepage": "https://v8661087.github.io/React-Shopping-Cart/",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
