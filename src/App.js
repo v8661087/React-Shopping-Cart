@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 class App extends Component {
   state = {
     cart: [],
-    term:"",
     products: [
       {
         id: 1,
@@ -104,7 +103,7 @@ class App extends Component {
     const cart = [...this.state.cart];
     const index = cart.indexOf(product);
     cart[index] = { ...product };
-    if ( cart[index].quantity !== 1) {
+    if (cart[index].quantity !== 1) {
       cart[index].quantity--;
       this.setState({ cart });
     }
@@ -124,22 +123,20 @@ class App extends Component {
     this.setState({ cart });
   };
 
-  handleAdd = (product) => {
-      const cart = this.state.cart;
-      if (cart.some(item => item.id === product.id)) {
-        const index = cart.findIndex(item => item.id === product.id);
-        cart[index].quantity += product.quantity;
-        this.setState({
-          cart
-        });
-      } else {
-        cart[cart.length] = product
-        console.log(cart)
-      }
+  handleAdd = product => {
+    const cart = this.state.cart;
+    if (cart.some(item => item.id === product.id)) {
+      const index = cart.findIndex(item => item.id === product.id);
+      cart[index].quantity += Number(product.quantity);
       this.setState({
-          cart,
-        });
-    
+        cart: cart
+      });
+    } else {
+      cart[cart.length] = JSON.parse(JSON.stringify(product));
+    }
+    this.setState({
+      cart: cart
+    });
   };
 
   render() {
