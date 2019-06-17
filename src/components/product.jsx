@@ -4,7 +4,7 @@ class Product extends Component {
   state = {
     modal: false
   };
-  
+
   getBadgeClasses() {
     let classes = "badge m-2 badge-";
     classes += this.props.product.quantity === 0 ? "warning" : "primary";
