@@ -1,10 +1,14 @@
 self.__precacheManifest = [
   {
+    "revision": "779d72a513ef690989096d61d8783228",
+    "url": "/React-Shopping-Cart/static/media/pokemon.779d72a5.jpg"
+  },
+  {
     "revision": "121f73f5c3c8e5b3b49a",
     "url": "/React-Shopping-Cart/static/js/runtime~main.024ff1e5.js"
   },
   {
-    "revision": "b610730235bce22ac235",
+    "revision": "b5e12fb72594085746f1",
     "url": "/React-Shopping-Cart/static/js/main.2c444d27.chunk.js"
   },
   {
@@ -12,11 +16,11 @@ self.__precacheManifest = [
     "url": "/React-Shopping-Cart/static/js/2.8515f2cd.chunk.js"
   },
   {
-    "revision": "b610730235bce22ac235",
-    "url": "/React-Shopping-Cart/static/css/main.b9d31734.chunk.css"
+    "revision": "b5e12fb72594085746f1",
+    "url": "/React-Shopping-Cart/static/css/main.2ac6dc63.chunk.css"
   },
   {
-    "revision": "b836c31b1686201a339a159762aaf165",
+    "revision": "895efdd7c128159caaf9881dda892a99",
     "url": "/React-Shopping-Cart/index.html"
   }
 ];
