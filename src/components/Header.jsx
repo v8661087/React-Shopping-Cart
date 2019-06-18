@@ -13,7 +13,7 @@ class Header extends Component {
         return ( 
         
         <div className="header">
-            <div className="logo"><a href="#top">Pokemon</a></div>
+            <div className="logo"><a href="#top"><img className="logo-image" src="pokeball.png" alt="pokeball"/>Pokemon</a></div>
             <div className="shopping-cart">
               <button
                 onClick={this.handleCart}

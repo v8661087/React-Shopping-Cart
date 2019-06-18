@@ -22,12 +22,16 @@ p {
 }
 .logo {
   flex: none;
-  width: 90px;
+  width: 120px;
   display: flex;
   align-items: center;
   margin: 0 18px;
 }
-
+.logo-image{
+  float: left;
+  width: 18px;
+  padding: 6px 9px 0;
+}
 .product-list {
   background-image: url("./images/pokemon.jpg");
   background-attachment: fixed;
@@ -104,7 +108,7 @@ p {
   width: 330px;
   max-height: 390px;
   padding-bottom: 9px;
-  font-size: 18px;
+  font-size: 21px;
   overflow: auto
 }
 .product-none{
@@ -114,7 +118,7 @@ p {
   display: flex;
   align-items: center;
   margin-bottom: 3px;
-  font-size: 15px;
+  font-size: 18px;
   padding: 6px 0 6px;
 }
 .cart-item:hover {
@@ -157,6 +161,7 @@ p {
   border: none;
   cursor: pointer;
   color: white;
+  font-size: 18px 
 }
 @media (max-width: 540px) {
   .search {
