@@ -14,19 +14,21 @@ class Header extends Component {
       showCart: false
     });
   };
+  scrollTop = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  };
   render() {
     const { cart, onIncrement, onDecrement, onDelete } = this.props;
     return (
       <div className="header">
-        <div className="logo">
-          <a href="#top">
-            <img
-              className="logo-image"
-              src="./images/pokeball.png"
-              alt="pokeball"
-            />
-            Pokemon
-          </a>
+        <div className="logo" onClick={this.scrollTop}>
+          <img
+            className="logo-image"
+            src="./images/pokeball.png"
+            alt="pokeball"
+          />
+          Pokemon
         </div>
         <div
           className="cart-drawer"
