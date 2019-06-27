@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import "./Pokemon.scss";
 import { Route } from "react-router-dom";
 import HomePage from "./components/Home";
 import { HashRouter } from "react-router-dom";

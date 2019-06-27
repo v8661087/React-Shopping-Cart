@@ -82,7 +82,7 @@ class Home extends Component {
         />
         <Footer />
         {this.state.showAddToCart ? (
-          <div className="product-added__popup">
+          <div className="product-added">
             <div>
               <img src="./images/checkmark.png" alt="checkmark" width="150" />
             </div>

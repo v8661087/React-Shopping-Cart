@@ -79,7 +79,7 @@ class Cart2 extends Component {
             ${this.props.product.price * this.props.product.quantity}
           </div>
           <div className="cart-page-product-header__action">
-            <button onClick={this.handleAlert} className="product__action">
+            <button onClick={this.handleAlert} className="cart-page-product-header__action-button">
               刪除
             </button>
           </div>

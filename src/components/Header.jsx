@@ -60,7 +60,7 @@ class Header extends Component {
                   <img
                     src="./images/smile.png"
                     alt="smile"
-                    className="cart-drawer-empty-image"
+                    className="cart-drawer--empty__image"
                   />
                   <p>尚無商品</p>
                 </div>
@@ -79,7 +79,7 @@ class Header extends Component {
 
                 <div>
                   <Link to="/checkout">
-                    <button className="cart-page-link__button">
+                    <button className="cart-drawer-link__button">
                       查看我的購物車
                     </button>
                   </Link>
