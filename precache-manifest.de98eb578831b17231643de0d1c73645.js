@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/React-Shopping-Cart/static/css/main.21fefdcf.chunk.css"
   },
   {
-    "revision": "429dce7f67ead56c59d020fa7df1018b",
+    "revision": "d762f0c96730ceef82563a423d2bef2d",
     "url": "/React-Shopping-Cart/index.html"
   }
 ];
