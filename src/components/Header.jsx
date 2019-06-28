@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 
 class Header extends Component {
   state = { showCart: false };
+  handleCart = () =>{
+    this.setState({
+      showCart:!this.state.showCart
+    })
+  }
   handleCartOpen = () => {
     this.setState({
       showCart: true
@@ -32,10 +37,10 @@ class Header extends Component {
         </div>
         <div
           className="cart-drawer"
+          onClick={this.handleCart}
           onMouseEnter={this.handleCartOpen}
           onMouseLeave={this.handleCartClose}
         >
-          <Link to="/checkout">
             <button className="cart-drawer-button">
               <img
                 src="https://image.flaticon.com/icons/svg/2/2772.svg"
@@ -45,7 +50,6 @@ class Header extends Component {
 
               <span className="cart-drawer-badge">{cart.length}</span>
             </button>
-          </Link>
         </div>
         {this.state.showCart ? (
           <div

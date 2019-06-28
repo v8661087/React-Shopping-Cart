@@ -1,7 +1,7 @@
-$dark:#17181c;
-$gray:#202227;
+$dark: #17181c;
+$gray: #202227;
 $blue: #0a60cf;
-$green:chartreuse;
+$green: chartreuse;
 
 body {
   background-color: $dark;
@@ -67,6 +67,7 @@ p {
     margin: auto;
     width: 159px;
     height: 159px;
+    cursor: zoom-in;
     &:hover {
       transform: scale(1.2);
     }
@@ -93,6 +94,9 @@ p {
     cursor: pointer;
     padding: 6px;
     font-size: 15px;
+    &:hover {
+      filter: brightness(110%);
+    }
   }
   &-added {
     position: fixed;
@@ -163,7 +167,7 @@ p {
     overflow: auto;
     justify-content: center;
   }
-  &-link__button{
+  &-link__button {
     width: 210px;
     padding: 3px 6px;
     background-color: $blue;
@@ -171,6 +175,9 @@ p {
     cursor: pointer;
     color: white;
     font-size: 18px;
+    &:hover {
+      filter: brightness(110%);
+    }
   }
   &--empty {
     margin: 9px 0;
@@ -300,7 +307,7 @@ p {
       max-width: 180px;
       width: 100%;
       text-align: center;
-      &-button{
+      &-button {
         color: white;
         text-decoration: none;
         font-size: 21px;
@@ -308,8 +315,8 @@ p {
         outline: none;
         background-color: rgb(41, 41, 41);
         margin-left: 9px;
-        &:hover{
-            color: rgb(255, 51, 51);
+        &:hover {
+          color: rgb(255, 51, 51);
         }
       }
     }
@@ -354,7 +361,7 @@ p {
       font-size: 21px;
       margin-top: 18px;
       &:hover {
-        filter: brightness(90%);
+        filter: brightness(110%);
       }
     }
   }
@@ -377,7 +384,7 @@ p {
   outline: none;
   cursor: pointer;
   &:hover {
-    filter: brightness(90%);
+    filter: brightness(110%);
   }
 }
 .popup {
@@ -420,15 +427,32 @@ p {
         background-color: $blue;
         color: white;
       }
-      &-cancle{
+      &-cancle {
         outline: none;
         cursor: pointer;
         width: 50%;
         font-size: 18px;
         padding: 9px 18px;
         background-color: $dark;
-  color: white
+        color: white;
       }
     }
+  }
+}
+@media (max-width: 500px) {
+  .cart-drawer-content {
+    width: 240px;
+  }
+  .cart-item-name {
+    width: 90px;
+  }
+  .cart-drawer-empty-image {
+    width: 210px;
+  }
+  .cart-page {
+    margin: 0;
+  }
+  .checkout__button {
+    margin: 0;
   }
 }
