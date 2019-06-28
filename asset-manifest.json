@@ -1,14 +1,14 @@
 {
-  "main.css": "/React-Shopping-Cart/static/css/main.21fefdcf.chunk.css",
-  "main.js": "/React-Shopping-Cart/static/js/main.c8df8a29.chunk.js",
-  "main.js.map": "/React-Shopping-Cart/static/js/main.c8df8a29.chunk.js.map",
+  "main.css": "/React-Shopping-Cart/static/css/main.1d70210f.chunk.css",
+  "main.js": "/React-Shopping-Cart/static/js/main.d36d41c2.chunk.js",
+  "main.js.map": "/React-Shopping-Cart/static/js/main.d36d41c2.chunk.js.map",
   "runtime~main.js": "/React-Shopping-Cart/static/js/runtime~main.024ff1e5.js",
   "runtime~main.js.map": "/React-Shopping-Cart/static/js/runtime~main.024ff1e5.js.map",
-  "static/js/2.348b3b34.chunk.js": "/React-Shopping-Cart/static/js/2.348b3b34.chunk.js",
-  "static/js/2.348b3b34.chunk.js.map": "/React-Shopping-Cart/static/js/2.348b3b34.chunk.js.map",
+  "static/js/2.5ba5f162.chunk.js": "/React-Shopping-Cart/static/js/2.5ba5f162.chunk.js",
+  "static/js/2.5ba5f162.chunk.js.map": "/React-Shopping-Cart/static/js/2.5ba5f162.chunk.js.map",
   "index.html": "/React-Shopping-Cart/index.html",
-  "precache-manifest.de98eb578831b17231643de0d1c73645.js": "/React-Shopping-Cart/precache-manifest.de98eb578831b17231643de0d1c73645.js",
+  "precache-manifest.97a5f40d4b2ea58aa5657729b5b9a1d8.js": "/React-Shopping-Cart/precache-manifest.97a5f40d4b2ea58aa5657729b5b9a1d8.js",
   "service-worker.js": "/React-Shopping-Cart/service-worker.js",
-  "static/css/main.21fefdcf.chunk.css.map": "/React-Shopping-Cart/static/css/main.21fefdcf.chunk.css.map",
+  "static/css/main.1d70210f.chunk.css.map": "/React-Shopping-Cart/static/css/main.1d70210f.chunk.css.map",
   "static/media/Pokemon.scss": "/React-Shopping-Cart/static/media/pokemon.779d72a5.jpg"
 }
