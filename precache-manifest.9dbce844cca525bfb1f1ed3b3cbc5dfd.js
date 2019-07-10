@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/React-Shopping-Cart/static/js/runtime~main.024ff1e5.js"
   },
   {
-    "revision": "1fbb226d22ddc20acec6",
-    "url": "/React-Shopping-Cart/static/js/main.d36d41c2.chunk.js"
+    "revision": "32d392612b7acf47961c",
+    "url": "/React-Shopping-Cart/static/js/main.c9d5cf3a.chunk.js"
   },
   {
     "revision": "2729da0355e484f9df1d",
     "url": "/React-Shopping-Cart/static/js/2.5ba5f162.chunk.js"
   },
   {
-    "revision": "1fbb226d22ddc20acec6",
-    "url": "/React-Shopping-Cart/static/css/main.1d70210f.chunk.css"
+    "revision": "32d392612b7acf47961c",
+    "url": "/React-Shopping-Cart/static/css/main.7b2c4da5.chunk.css"
   },
   {
-    "revision": "409d427e3547ed7ffaf1ee7e6541e289",
+    "revision": "2f46eca415f251efb28a102ccaa60132",
     "url": "/React-Shopping-Cart/index.html"
   }
 ];
