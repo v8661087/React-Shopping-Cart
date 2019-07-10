@@ -239,9 +239,10 @@ p {
 .modal {
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
-  padding-top: 36px; /* Location of the box */
+  padding: 33px 0; /* Location of the box */
   left: 0;
   top: 0;
+  padding-bottom: 30px;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -249,9 +250,9 @@ p {
   &-content {
     background-color: $dark;
     margin: auto;
-    padding: 20px;
+    padding: 9px 18px 33px;
     border: 1px solid #888;
-    width: 50%;
+    width: 60%;
     text-align: center;
   }
   &__close {
@@ -265,7 +266,7 @@ p {
     }
   }
   &-product__image {
-    max-width: 450px;
+    max-width: 360px;
     width: 100%;
   }
 }
