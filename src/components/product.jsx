@@ -6,16 +6,45 @@ class Product extends Component {
     value: this.props.product.quantity
   };
 
-  handleModal = () => {
-    this.setState({
-      modal: !this.state.modal
-    });
+  handleModalOpen = () => {
     if (document.body.style.overflow === "hidden") {
       document.body.style.overflow = "auto";
     } else {
       document.body.style.overflow = "hidden";
     }
+    this.setState({
+      modal: !this.state.modal
+    });
   };
+  handleModalClose = event => {
+    if (
+      event.target === document.getElementById("close")
+    ) {
+      if (document.body.style.overflow === "hidden") {
+        document.body.style.overflow = "auto";
+      } else {
+        document.body.style.overflow = "hidden";
+      }
+      this.setState({
+        modal: !this.state.modal
+      });
+    }
+  };
+  handleModalClose2 = event => {
+    if (
+      event.target !== document.getElementById("close")
+    ) {
+      if (document.body.style.overflow === "hidden") {
+        document.body.style.overflow = "auto";
+      } else {
+        document.body.style.overflow = "hidden";
+      }
+      this.setState({
+        modal: !this.state.modal
+      });
+    }
+  };
+
   handleChange = event => {
     event.target.value = event.target.value.replace(/^0|\D/g, "");
     let max = 99;
@@ -40,7 +69,7 @@ class Product extends Component {
             className="product__image"
             src={this.props.product.src}
             alt={this.props.product.name}
-            onClick={this.handleModal}
+            onClick={this.handleModalOpen}
           />
           <div className="product__name">{this.props.product.name}</div>
           <div>
@@ -73,9 +102,13 @@ class Product extends Component {
           </div>
         </div>
         {this.state.modal ? (
-          <div className="modal" onClick={this.handleModal}>
+          <div id="modal" className="modal" onClick={this.handleModalClose2}>
             <div className="modal-content">
-              <span className="modal__close" onClick={this.handleModal}>
+              <span
+                id="close"
+                className="modal__close"
+                onClick={this.handleModalClose}
+              >
                 &times;
               </span>
               <img

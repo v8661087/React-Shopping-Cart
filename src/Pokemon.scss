@@ -2,7 +2,10 @@ $dark: #17181c;
 $gray: #202227;
 $blue: #0a60cf;
 $green: chartreuse;
-
+$border-color:rgb(70, 70, 70);
+html{
+  height: 100%;
+}
 body {
   background-color: $dark;
   color: white;
@@ -27,7 +30,7 @@ p {
   justify-content: center;
   background-color: $dark;
   width: 100%;
-  border-bottom: 1px solid rgb(70, 70, 70);
+  border-bottom: 1px solid $border-color;
   z-index: 1;
 }
 .logo {
@@ -75,7 +78,7 @@ p {
   &__button {
     border: none;
     border-radius: 50%;
-    background-color: #202227;
+    background-color: $gray;
     font-size: 15px;
     outline-style: none;
     outline: none;
@@ -116,7 +119,7 @@ p {
     font-size: 18px;
     border: none;
     outline: none;
-    background-color: #202227;
+    background-color: $gray;
     color: white;
   }
 }
@@ -195,15 +198,16 @@ p {
   font-size: 18px;
   padding: 6px 0 6px;
   &:hover {
-    background-color: #202227;
+    background-color: $gray;
   }
   &-name {
     font-size: 21px;
-    width: 225px;
+    max-width: 225px;
+    width:100%;
     text-align: left;
   }
   &-total {
-    width: 126px;
+    min-width: 126px;
   }
   &__action {
     color: white;
@@ -215,7 +219,7 @@ p {
     margin-left: 36px;
     &:hover {
       color: rgb(255, 51, 51);
-      background-color: #202227;
+      background-color: $gray;
     }
   }
   &-image {
@@ -251,14 +255,14 @@ p {
     background-color: $dark;
     margin: auto;
     padding: 9px 18px 33px;
-    border: 1px solid #888;
+    border: 1px solid $border-color;
     width: 60%;
     text-align: center;
   }
   &__close {
     color: #aaaaaa;
     float: right;
-    font-size: 28px;
+    font-size: 36px;
     font-weight: bold;
     cursor: pointer;
     &:hover {
@@ -402,7 +406,7 @@ p {
     background-color: $dark;
     margin: auto;
     padding: 30px;
-    border: 1px solid #888;
+    border: 1px solid $border-color;
     width: 48%;
     text-align: center;
     &__title {
@@ -441,19 +445,36 @@ p {
   }
 }
 @media (max-width: 500px) {
-  .cart-drawer-content {
-    width: 240px;
-  }
-  .cart-item-name {
-    width: 90px;
-  }
-  .cart-drawer-empty-image {
-    width: 210px;
-  }
-  .cart-page {
-    margin: 0;
+  .cart{
+    &-item-name{
+      width: 100%
+    }
+    &-page{
+      margin: 0 3px;
+    }
+    &-drawer{
+      &-content{
+        width: 72%
+      }
+      &-empty-image{
+        width: 210px;
+      }
+    }
   }
   .checkout__button {
     margin: 0;
+  }
+  .modal{
+    &-content{
+      width:84%
+    }
+    &__close{
+      font-size: 48px
+    }
+  }
+  .popup{
+    &-content{
+      width: 69%
+    }
   }
 }

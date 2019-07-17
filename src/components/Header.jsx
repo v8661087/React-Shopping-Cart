@@ -9,16 +9,6 @@ class Header extends Component {
       showCart:!this.state.showCart
     })
   }
-  handleCartOpen = () => {
-    this.setState({
-      showCart: true
-    });
-  };
-  handleCartClose = () => {
-    this.setState({
-      showCart: false
-    });
-  };
   scrollTop = () => {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
@@ -38,8 +28,6 @@ class Header extends Component {
         <div
           className="cart-drawer"
           onClick={this.handleCart}
-          onMouseEnter={this.handleCartOpen}
-          onMouseLeave={this.handleCartClose}
         >
             <button className="cart-drawer-button">
               <img
@@ -54,8 +42,6 @@ class Header extends Component {
         {this.state.showCart ? (
           <div
             className="cart-drawer-content"
-            onMouseEnter={this.handleCartOpen}
-            onMouseLeave={this.handleCartClose}
           >
             <div className="cart-drawer-triangle" />
             {cart.length === 0 ? (
