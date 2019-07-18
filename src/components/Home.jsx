@@ -7,9 +7,13 @@ import { connect } from "react-redux";
 class Home extends Component {
   componentDidMount() {
     document.title = "Pokemon";
-    const cart = JSON.parse(localStorage.getItem('cart'));
-    this.props.data.cart = cart
-    this.setState({ cart });
+    if(localStorage.getItem('cart')){
+      const cart = JSON.parse(localStorage.getItem('cart'));
+      this.props.data.cart = cart
+      this.setState({ cart });
+    }else{
+      localStorage.setItem('cart',JSON.stringify(this.props.data.cart))
+    }
   }
   componentDidUpdate(){
     const cart = [...this.props.data.cart]
