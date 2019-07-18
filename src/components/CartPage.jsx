@@ -6,6 +6,13 @@ import Cart2 from "./Cart2";
 class CartPage extends Component {
   componentDidMount() {
     document.title = "Pokemon | 購物車";
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    this.props.data.cart = cart
+    this.setState({ cart });
+  }
+  componentDidUpdate(){
+    const cart = [...this.props.data.cart]
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
   handleIncrement = product => {
     const cart = [...this.props.data.cart];

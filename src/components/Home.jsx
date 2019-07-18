@@ -7,6 +7,13 @@ import { connect } from "react-redux";
 class Home extends Component {
   componentDidMount() {
     document.title = "Pokemon";
+    const cart = JSON.parse(localStorage.getItem('cart'));
+    this.props.data.cart = cart
+    this.setState({ cart });
+  }
+  componentDidUpdate(){
+    const cart = [...this.props.data.cart]
+    localStorage.setItem('cart', JSON.stringify(cart));
   }
   state = {
     showAddToCart: false
@@ -67,7 +74,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
-        <div class="fixed"></div>
+        <div className="fixed"></div>
         <Header
           cart={this.props.data.cart}
           onIncrement={this.handleIncrement}
