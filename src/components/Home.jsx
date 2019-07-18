@@ -67,6 +67,7 @@ class Home extends Component {
   render() {
     return (
       <React.Fragment>
+        <div class="fixed"></div>
         <Header
           cart={this.props.data.cart}
           onIncrement={this.handleIncrement}
