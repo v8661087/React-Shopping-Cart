@@ -45,8 +45,7 @@ p {
   &__image{
     width: 18px;
     height: 18px;
-    margin-right: 9px;
-    padding: 3px 9px 0;
+    padding:6px 9px 0;
     background-image: url("./images/pokeball.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -313,6 +312,7 @@ p {
   margin: 0 30px;
   &-logo {
     padding: 6px 9px;
+    display: flex;
   }
   &-product-header {
     display: flex;
@@ -387,8 +387,14 @@ p {
   &--empty {
     text-align: center;
     &__image {
+      background-image: url("./images/smile.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      max-width:480px;
       width: 100%;
-      max-width: 480px;
+      height: 50vh;
+      margin:0 auto;
     }
     &__text {
       font-size: 30px;
