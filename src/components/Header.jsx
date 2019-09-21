@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Cart from "./Cart";
 import { Link } from "react-router-dom";
-
 class Header extends Component {
   state = { showCart: false };
   handleCart = () =>{
@@ -18,11 +17,7 @@ class Header extends Component {
     return (
       <div className="header">
         <div className="logo" onClick={this.scrollTop}>
-          <img
-            className="logo-image"
-            src="./images/pokeball.png"
-            alt="pokeball"
-          />
+          <span className="logo__image"></span>
           Pokemon
         </div>
         <div
@@ -45,16 +40,10 @@ class Header extends Component {
           >
             <div className="cart-drawer-triangle" />
             {cart.length === 0 ? (
-              <div>
                 <div className="cart-drawer--empty">
-                  <img
-                    src="./images/smile.png"
-                    alt="smile"
-                    className="cart-drawer--empty__image"
-                  />
+                  <div className="cart-drawer--empty__image"></div>
                   <p>尚無商品</p>
                 </div>
-              </div>
             ) : (
               <React.Fragment>
                 {cart.map(product => (

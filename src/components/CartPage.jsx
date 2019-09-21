@@ -72,12 +72,8 @@ class CartPage extends Component {
       <div className="cart-page">
         <div className="cart-page-logo">
           <Link to="/">
-            <img
-              className="logo-image"
-              src="./images/pokeball.png"
-              alt="pokeball"
-            />
-            Pokemon | 購物車
+            <span className="logo__image"></span>
+            <span>Pokemon | 購物車</span>
           </Link>
         </div>
         {this.props.data.cart.length ? (

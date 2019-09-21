@@ -10,6 +10,7 @@ html body{
 body {
   background-color: $dark;
   color: white;
+  box-sizing: border-box
 }
 
 a,
@@ -41,10 +42,15 @@ p {
   align-items: center;
   margin: 0 18px;
   cursor: pointer;
-  &-image {
-    float: left;
+  &__image{
     width: 18px;
+    height: 18px;
+    margin-right: 9px;
     padding: 3px 9px 0;
+    background-image: url("./images/pokeball.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
   }
 }
 .fixed{
@@ -122,6 +128,14 @@ p {
     background: rgba(0, 0, 0, 0.9);
     text-align: center;
     z-index: 2;
+    &-checkmark{
+        width: 150px;
+        background-image: url("./images/checkmark.png");
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 150px;
+        margin:0 auto;
+    }
   }
   &__input {
     max-width: 60px;
@@ -196,9 +210,15 @@ p {
   &--empty {
     margin: 9px 0;
     &__image {
-      max-width: 300px;
+      background-image: url("./images/smile.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      max-width:300px;
       width: 100%;
-      height: auto;
+      height: 24vw;
+      padding: 0;
+      margin: 0 auto;
     }
   }
 }
@@ -307,6 +327,7 @@ p {
       width: 100%;
       display: flex;
       align-items: center;
+      justify-content: center
     }
     &__unit-price {
       max-width: 180px;
@@ -466,6 +487,12 @@ p {
     }
     &-page{
       margin: 0 3px;
+      &-item{
+        padding:0 3px;
+      }
+      &-product-header{
+        padding: 0 3px
+      }
     }
     &-drawer{
       &-content{
@@ -477,7 +504,7 @@ p {
     }
   }
   .checkout__button {
-    margin: 0;
+    margin: 3px;
   }
   .modal{
     &-content{
@@ -493,3 +520,4 @@ p {
     }
   }
 }
+

@@ -95,8 +95,7 @@ class Home extends Component {
         <Footer />
         {this.state.showAddToCart ? (
           <div className="product-added">
-            <div>
-              <img src="./images/checkmark.png" alt="checkmark" width="150" />
+            <div className="product-added-checkmark">
             </div>
             <div>商品已加入購物車</div>
           </div>
@@ -108,17 +107,11 @@ class Home extends Component {
   }
 }
 
-class connectHome extends Component {
-  state = {};
-  render() {
-    return <Home data={this.props.data} />;
-  }
-}
 
 const mapStateToProps = state => ({
   data: state
 });
 
-const HomePage = connect(mapStateToProps)(connectHome);
+const HomePage = connect(mapStateToProps)(Home);
 
 export default HomePage;
