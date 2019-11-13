@@ -5,37 +5,36 @@ import Footer from "./Footer";
 import { connect } from "react-redux";
 
 class Home extends Component {
-  componentDidMount() {
-    document.title = "Pokemon";
-    if(localStorage.getItem('cart')){
-      const cart = JSON.parse(localStorage.getItem('cart'));
-      this.props.data.cart = cart
-      this.setState({ cart });
-    }else{
-      localStorage.setItem('cart',JSON.stringify(this.props.data.cart))
-    }
-  }
-  componentDidUpdate(){
-    const cart = [...this.props.data.cart]
-    localStorage.setItem('cart', JSON.stringify(cart));
-  }
   state = {
     showAddToCart: false
   };
+  componentDidMount() {
+    console.log("20191113 20:02")
+    document.title = "Pokemon";
+    if (localStorage.getItem("cart")) {
+      const cart = JSON.parse(localStorage.getItem("cart"));
+      this.props.data.cart = cart;
+      this.setState({ cart });
+    } else {
+      localStorage.setItem("cart", JSON.stringify(this.props.data.cart));
+    }
+  }
+  componentDidUpdate() {
+    const cart = [...this.props.data.cart];
+    localStorage.setItem("cart", JSON.stringify(cart));
+  }
 
   handleIncrement = product => {
-    const cart = [...this.props.data.cart];
-    const products = [...this.props.data.products];
+    const products = this.props.data.products
     product.quantity++;
-    this.setState({ cart: cart, products: products });
+    this.setState({products});
   };
 
   handleDecrement = product => {
-    const cart = [...this.props.data.cart];
-    const products = [...this.props.data.products];
+    const products = this.props.data.products;
     if (product.quantity > 1) {
       product.quantity--;
-      this.setState({ cart: cart, products: products });
+      this.setState({products: products });
     }
   };
 
@@ -44,7 +43,7 @@ class Home extends Component {
     const index = cart.indexOf(product);
     if (index !== -1) {
       cart.splice(index, 1);
-      this.setState({ cart: cart });
+      this.setState({ cart });
     }
   };
 
@@ -55,63 +54,53 @@ class Home extends Component {
     }
     if (cart.some(item => item.id === product.id)) {
       const index = cart.findIndex(item => item.id === product.id);
-      cart[index].quantity += Number(product.quantity);
-      this.setState({
-        cart: cart
-      });
+      cart[index].quantity += product.quantity;
     } else {
-      cart[cart.length] = JSON.parse(JSON.stringify(product));
+      cart[cart.length] = {...product};
     }
     this.setState({
-      cart: cart,
+      cart,
       showAddToCart: true
     });
     setTimeout(
       () =>
         this.setState({
-          cart: cart,
           showAddToCart: false
         }),
       1500
     );
   };
   render() {
+    const { cart, products } = this.props.data;
     return (
-      <React.Fragment>
+      <>
         <div className="fixed"></div>
         <Header
-          cart={this.props.data.cart}
+          cart={cart}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
-          handleSearch={this.handleSearch}
         />
         <Products
-          products={this.props.data.products}
+          products={products}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onAdd={this.handleAdd}
         />
         <Footer />
-        {this.state.showAddToCart ? (
+        {this.state.showAddToCart && (
           <div className="product-added">
-            <div className="product-added-checkmark">
-            </div>
+            <div className="product-added-checkmark"></div>
             <div>商品已加入購物車</div>
           </div>
-        ) : (
-          ""
         )}
-      </React.Fragment>
+      </>
     );
   }
 }
-
 
 const mapStateToProps = state => ({
   data: state
 });
 
-const HomePage = connect(mapStateToProps)(Home);
-
-export default HomePage;
+export default connect(mapStateToProps)(Home);
