@@ -5,13 +5,23 @@ class Product extends Component {
     modal: false,
     value: this.props.product.quantity
   };
-
+  componentDidMount(){
+    document.addEventListener("keydown",this.handleKeyDown)
+  }
   handleModalOpen = () => {
     document.body.style.overflow = "hidden";
     this.setState({
       modal: !this.state.modal
     });
   };
+  handleKeyDown = e =>{
+    if(e.key === "Escape"){
+      document.body.style.overflow = "auto";
+      this.setState({
+        modal: false
+      });
+    }
+  }
   handleModalClose = e => {
     if (
       e.target === document.getElementById("close") ||

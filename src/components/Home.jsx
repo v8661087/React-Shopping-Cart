@@ -9,7 +9,7 @@ class Home extends Component {
     showAddToCart: false
   };
   componentDidMount() {
-    console.log("20191113 20:02")
+    console.log("20200214 16:33")
     document.title = "Pokemon";
     if (localStorage.getItem("cart")) {
       const cart = JSON.parse(localStorage.getItem("cart"));
@@ -56,7 +56,7 @@ class Home extends Component {
       const index = cart.findIndex(item => item.id === product.id);
       cart[index].quantity += product.quantity;
     } else {
-      cart[cart.length] = {...product};
+      cart.push({...product})
     }
     this.setState({
       cart,
@@ -77,8 +77,6 @@ class Home extends Component {
         <div className="fixed"></div>
         <Header
           cart={cart}
-          onIncrement={this.handleIncrement}
-          onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
         />
         <Products

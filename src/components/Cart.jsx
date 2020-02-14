@@ -24,32 +24,31 @@ class Cart extends Component {
       e.target.value = max;
     }
     this.setState({
-      value:e.target.value
-    })
+      value: e.target.value
+    });
   };
 
   handleBlur = e => {
     if (e.target.value === "") {
-      this.setState({value:this.props.product.quantity})
+      this.setState({ value: this.props.product.quantity });
     } else {
       this.props.product.quantity = parseInt(e.target.value);
     }
     this.props.onChange();
   };
 
-  handleIncrement = (product) =>{
-    product.quantity++
+  handleIncrement = product => {
+    product.quantity++;
     this.setState({
       value: product.quantity
-    })
-    this.props.onChange()
-  }
-
+    });
+    this.props.onChange();
+  };
 
   handleDecrement = product => {
     if (product.quantity > 1) {
       product.quantity--;
-      this.setState({value:product.quantity})
+      this.setState({ value: product.quantity });
     } else if (product.quantity === 1) {
       this.handleAlert();
     }
@@ -95,8 +94,7 @@ class Cart extends Component {
             </button>
           </div>
           <div className="cart-page-product-header__total-price total-price">
-            $
-            {product.quantity * product.price}
+            ${product.quantity * product.price}
           </div>
           <div className="cart-page-product-header__action">
             <button
